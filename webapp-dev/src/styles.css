@@ -1,0 +1,103 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+}
+
+/* Relevavnt utility classes that I'll need later */
+
+.cursor-pointer:hover { cursor: pointer; }
+
+.color-white { color: white; }
+
+.center-horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.center-vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-vertical {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-horizontal-center-vertical {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.gap-05em {
+    gap: 0.5em;
+}
+
+.gap-1em {
+    gap: 1em;
+}
+
+.gap-2em {
+    gap: 2em;
+}
+
+.gap-3em {
+    gap: 3em;
+}
+
+.gap-4em {
+    gap: 4em;
+}
+
+.gap-5em {
+    gap: 5em;
+}
+
+.no-overflow {
+    overflow: hidden;
+}
+
+.base-button {
+    padding: 1em;
+    background-color: #333333;
+    color: white;
+    border: none;
+    border-radius: 1em;
+}
+
+.base-button:hover {
+    cursor: pointer;
+}
+
+/* More specific classes */
+
+.guardian-name-text {
+    margin-left: 3em;
+    margin-top: 0.5em; 
+}
+
+.guardian-description-text {
+    margin-left: 4em;
+    font-size: 0.75em; 
+    font-weight: lighter;
+}

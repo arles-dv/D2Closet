@@ -1,0 +1,114 @@
+:root {
+    --background-color: #25262B;
+    --grid-line-color: #909195;
+    --grid-item-bar-width: 12em;
+    --grid-item-bar-height: 0.125em;
+    --grid-item-bar-spacing: 0.75em;
+    --img-border: 0.125em;
+}
+.character-page-background {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+    gap: 5em;
+}
+
+.grid-item {
+    z-index: 1;
+}
+
+img {
+    z-index: 2;
+}
+
+/* Horizontal bar */
+.grid-item::before {
+    display: block;
+    position: absolute;
+    content: "";
+    margin-left: 1em;
+    width: calc(var(--grid-item-bar-width) - var(--grid-item-bar-spacing));
+    height: var(--grid-item-bar-height);
+    z-index: 0;
+    background-color: var(--grid-line-color);
+}
+
+/* Vertical bar */
+.grid-left::before {
+    display: block;
+    position: absolute;
+    content: "";
+    margin-left: 1em; /* Armor slot icon is 2em x 2em */
+    margin-top: 2em; /* Armor slot icon is 2em x 2em */
+    width: var(--grid-item-bar-height);
+    height: 20em; /* 5 elements, 4em each + (1*4) em in gaps - 1 em for the margin top and bottom */
+    z-index: 1;
+    background-color: var(--grid-line-color);
+}
+
+.padding-1em {
+    width: 1em
+}
+
+img {
+    background-color: var(--background-color);
+}
+
+img.img-size-4em {
+    width: 4em;
+    height: 4em;
+    z-index: 2;
+    border: solid white var(--img-border);
+}
+
+.img-size-3em {
+    width: 3em;
+    height: 3em;
+    border: solid white var(--img-border);
+}
+
+.img-detail-text {
+    margin: 0.5em; 
+    width: 6em; 
+    word-wrap: wrap; 
+    font-size: 0.85em;
+    color: white;   
+}
+
+.img-grid-pad {
+    width: 4em;
+    height: 4em;
+    z-index: 2;
+}
+
+.img-grid-pad::before {
+    display: block;
+    position: absolute;
+    content: "";
+    margin-top: calc(2em - var(--grid-item-bar-height) * 2);
+    margin-left: calc(4.50em - 2*var(--img-border));
+    width: var(--grid-item-bar-spacing);
+    height: 0.5em;
+    z-index: 1;
+    background-color: var(--background-color);
+}
+
+.img-grid-pad::after {
+    display: block;
+    position: absolute;
+    content: "";
+    margin-top: calc(-2em - 0.75em - 2 * var(--grid-item-bar-height) + 2*var(--img-border));
+    margin-left: calc(0em - var(--grid-item-bar-spacing));
+    width: var(--grid-item-bar-spacing);
+    height: 0.5em;
+    z-index: 1;
+    background-color: var(--background-color);
+}
+
+.stage {
+    z-index: 2;
+    background-color: white;
+    width: 25vw;
+    height: 70vh;
+}
